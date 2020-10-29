@@ -9,23 +9,23 @@ public class Main {
 
     private static void unosArtikalaUMarket(){
         supermarket.dodajArtikl(new Artikl("Biciklo", 1000, "1"));
-        supermarket.dodajArtikl(new Artikl("Biciklo", 1000, "2"));
-        supermarket.dodajArtikl(new Artikl("Biciklo", 1000, "3"));
-        supermarket.dodajArtikl(new Artikl("Biciklo", 1000, "4"));
+        supermarket.dodajArtikl(new Artikl("Biciklo s dva tocka", 1000, "2"));
+        supermarket.dodajArtikl(new Artikl("Biciklo s crvenim pedalama", 1000, "3"));
+        supermarket.dodajArtikl(new Artikl("Biciklo s zelenim ruckama", 1000, "4"));
         supermarket.dodajArtikl(new Artikl("Biciklo", 1000, "5"));
         supermarket.dodajArtikl(new Artikl("Biciklo", 1000, "6"));
         supermarket.dodajArtikl(new Artikl("Biciklo", 1000, "7"));
-        supermarket.dodajArtikl(new Artikl("Biciklo", 1000, "8"));
+        supermarket.dodajArtikl(new Artikl("Romobil", 100, "8"));
         supermarket.dodajArtikl(new Artikl("Biciklo", 1000, "9"));
         supermarket.dodajArtikl(new Artikl("Biciklo", 1000, "10"));
-        supermarket.dodajArtikl(new Artikl("Biciklo", 1000, "11"));
+        supermarket.dodajArtikl(new Artikl("Role", 50, "11"));
         supermarket.dodajArtikl(new Artikl("Biciklo", 1000, "12"));
         supermarket.dodajArtikl(new Artikl("Biciklo", 1000, "13"));
         supermarket.dodajArtikl(new Artikl("Biciklo", 1000, "14"));
         supermarket.dodajArtikl(new Artikl("Biciklo", 1000, "15"));
-        supermarket.dodajArtikl(new Artikl("Biciklo", 1000, "16"));
+        supermarket.dodajArtikl(new Artikl("Kaciga", 34, "16"));
         supermarket.dodajArtikl(new Artikl("Biciklo", 1000, "17"));
-        supermarket.dodajArtikl(new Artikl("Biciklo", 1000, "18"));
+        supermarket.dodajArtikl(new Artikl("Biciklo sa zutim sicem", 1000, "18"));
         supermarket.dodajArtikl(new Artikl("Biciklo", 1000, "19"));
         supermarket.dodajArtikl(new Artikl("Biciklo", 1000, "20"));
     }
@@ -54,7 +54,6 @@ public class Main {
             System.out.print("0 - odustani\n1 - dodaj u korpu\n2 - izbaci iz korpe\n3 - checkout\nUnesite opciju: ");
             Scanner scanner = new Scanner(System.in);
             int opcija = scanner.nextInt();
-
             if(opcija == 0){
                 System.out.println("Odustali ste od kupovine.");
                 return;
@@ -63,8 +62,8 @@ public class Main {
                 System.out.println("Dodavanje artikla u korpu\nArtikli u marketu su: ");
                 ispisArtikala(supermarket.getArtikli());
                 System.out.println("Unesite kod artikla (unesite malo slovo \"c\" za odustajanje): ");
+                scanner.nextLine();
                 String kod = scanner.nextLine();
-                kod = scanner.nextLine();
                 if(!kod.equals("c")){
                     Artikl a = supermarket.izbaciArtiklSaKodom(kod);
                     if(a != null){
@@ -80,8 +79,8 @@ public class Main {
                 System.out.println("Izbacivanje artikla iz korpe\nArtikli u korpi su: ");
                 ispisArtikala(korpa.getArtikli());
                 System.out.println("Unesite kod artikla (unesite malo slovo \"c\" za odustajanje): ");
+                scanner.nextLine();
                 String kod = scanner.nextLine();
-                kod = scanner.nextLine();
                 if(!kod.equals("c")){
                     Artikl a = korpa.izbaciArtiklSaKodom(kod);
                     if(a != null){
