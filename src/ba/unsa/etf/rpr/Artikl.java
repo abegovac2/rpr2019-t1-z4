@@ -5,12 +5,6 @@ public class Artikl {
     private Integer cijena;
     private String kod;
 
-    /*public Artikl(Artikl novi){
-        naziv = novi.getNaziv();
-        cijena = novi.getCijena();
-        kod = getKod();
-    }*/
-
     public Artikl(String naziv, Integer cijena, String kod){
         this.naziv = naziv;
         this.cijena = cijena;

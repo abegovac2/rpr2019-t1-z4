@@ -43,4 +43,8 @@ public class Korpa {
         }
         return suma;
     }
+
+    public Integer getPopunjeno() {
+        return popunjeno;
+    }
 }
